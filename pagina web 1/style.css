@@ -1,0 +1,243 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background:rgb(176,176,176);
+
+    --background-linear: linear-gradient(180deg, rgba(176,176,176,1) 0%, rgba(136,136,136,1) 50%, rgba(109,109,109,1) 100%);
+    --background-linear2:linear-gradient(180deg, rgba(109,109,109,1) 0%, rgba(136,136,136,1) 50%, rgba(176,176,176,1) 100%);
+
+}
+
+
+.container-Iner{
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    background: rgb(176,176,176);
+    background: linear-gradient(180deg, rgba(176,176,176,1) 0%, rgba(136,136,136,1) 50%, rgba(109,109,109,1) 100%);
+    flex-direction: column;
+    align-items: center;
+
+}
+.Container-content-1, .container-menu{
+    width: 657px;
+    max-width: initial;
+    min-width: 657px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+}
+
+.container-menu{
+    padding:0px  90px 0px;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: blur(.5rem);
+    padding-top: 3.5rem;
+}
+.container-menu, div{
+    font: 600 16px "Roboto", sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.inicio, .herramientas, .hardware{
+    color: #353535;
+    cursor: pointer;
+    border-bottom: 0px solid #2C2C2C;
+    outline: none;
+    text-decoration: none;
+
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+
+    
+}
+.inicio:hover, .herramientas:hover, .hardware:hover{
+    transition: .5s ease  ;
+    border-bottom: 1px solid #2C2C2C;
+    color: rgb(189, 87, 87);
+}
+
+.Container-content-2, .title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 140px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Container-content-2{
+    max-width: 10%;
+    min-width: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    text-transform: uppercase;
+    min-width: 892px;
+    text-wrap: wrap;
+    
+}
+
+.Container-content-3{
+    display: flex;
+    justify-content: start;
+    gap: 10rem;
+    padding: 0;
+    margin: 0;
+
+}
+.selected-1, .selected-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fas, .fa-arrow-down{
+    font-size: 3rem;
+    color: #2C2C2C;
+    cursor: pointer;
+
+}
+.fas:hover, .fa-arrow-down:hover{
+    font-size: 3rem;
+    color: #c8ec99;
+    cursor: pointer;
+    transition: all ease .5s;
+
+}
+
+.text-1{
+    font: 400  24px"Roboto", sans-serif;
+    color: whitesmoke;
+}
+
+.seciton-1, .seciton-2, .seciton-3{
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    padding-right: 102;
+    padding-left: 134;
+    display: grid;
+    background: var(--background);
+    background: var(--background-linear2);
+    
+    grid-template-columns: .5fr 1fr 1fr .5fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 6rem; 
+    grid-template-areas: 
+      ". title title ."
+      ". text img ."
+      ". . . ."; 
+  }
+
+.container-title-seccion-1{
+    
+    grid-area: title;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.title2{
+    font: 500 40px "Roboto", sans-serif;
+    letter-spacing: .3rem;
+    width: 50%;
+}
+.container-seccion-2-text{
+    grid-area: text;
+    display: flex;
+    width: 90%;
+    font: 300 22px "Roboto", sans-serif;
+
+}
+.container-image{
+    grid-area: img;
+}
+
+.seciton-2{
+    background: var(--background-linear);
+}
+.container-title-seccion-2{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title3{
+    font: 500 40px "Roboto", sans-serif;
+    letter-spacing: .3rem;
+    width: 100%;
+}
+.container-seccion-3-text{
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    font: 300 22px "Roboto", sans-serif;
+
+}
+
+.container-image2{
+    grid-area: text;
+}
+.container-footer{
+    background: var(--background);
+    background: var(--background-linear);
+}
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Estilo para los campos de entrada */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.input-field:focus{
+    
+    outline: none;
+}
+
+/* Estilo para el botón de enviar */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
